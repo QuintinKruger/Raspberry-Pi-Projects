@@ -19,7 +19,7 @@ public class RaspberryPiController {
     public ResponseEntity<String> toggleLed(){
         if (pin == null){
             GpioController gpioController = GpioFactory.getInstance();
-            pin = gpioController.provisionDigitalOutputPin(RaspiPin.GPIO_14, "MyLED", PinState.LOW);
+            pin = gpioController.provisionDigitalOutputPin(RaspiPin.GPIO_17, "MyLED", PinState.LOW);
         }
         pin.toggle();
 
